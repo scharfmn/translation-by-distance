@@ -1,0 +1,11 @@
+{% extends 'event-base.html' %}
+
+{% block inhead %}
+<title>nominal</title>
+{% endblock %}
+<h3>Text from {{target_lang}}</h3>
+{% block provided_container %}
+{% for t in text %}
+    <span>{{t}}</span><br>
+{% endfor %}
+{% endblock %}

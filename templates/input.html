@@ -1,0 +1,41 @@
+{% extends 'event-base.html' %}
+{% block inhead %}
+<title>Nominal</title>
+{% endblock %} 
+{% block provided_container %}
+<form method="POST" role="form" action="{{ url_for('generate') }}" class='bare-bones-input' novalidate>
+  <div class="form-group">
+    <label for="to-lang">Please choose a target language</label>
+    <select required class="form-control" id="to-lang" name='user-lang'>
+      <option value="" selected hidden>Select...</option>      
+      {% for lang in langlist %}
+        <option value="{{lang}}">{{lang}}</option>
+      {% endfor %}
+    </select>
+    <div class="invalid-feedback">
+      Please select a language.
+    </div>
+  </div>
+<!--   <br>
+  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-secondary active">
+      <input type="radio" name="text-options" value="phrase" id="phrase" autocomplete="off" checked> phrase
+    </label>
+    <label class="btn btn-secondary">
+      <input type="radio" name="text-options" value="lines" id="lines" autocomplete="off"> lines
+    </label>
+  </div>
+  <br> -->
+  <div class="form-group">
+    <label for="main-input-text">Enter text</label>
+    <textarea class="form-control" id="main-input-text" name="user-text" rows="10" placeholder="Text" required>{{ nameblock if nameblock else ''}}</textarea>
+    <div class="invalid-feedback">
+      Please enter some text.
+    </div>
+  </div>
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+  <button type="submit" class="btn btn-primary">Submit Text</button>
+</form>
+<br>
+{% endblock %} 
+

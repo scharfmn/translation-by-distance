@@ -129,6 +129,4 @@ venv/
 wheels/
 app.db
 *.json
-latin1/
-utf8/
 *.rdb 

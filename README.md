@@ -1,6 +1,6 @@
-# xlang · cross-language distance
+# xlanguage · cross-language distance
 
-Uses Levenshtein distances to transform text into words from another language of your choice
+Use Levenshtein distances to transform text into words from another language of your choice
 
 The results are not necessarily (or usually) grammatical in that language
 

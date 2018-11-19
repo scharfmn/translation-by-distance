@@ -1,4 +1,4 @@
-# xlanguage · cross-language distance
+# xlanguage · a cross-language distance translator
 
 Use Levenshtein distances to transform text into words from another language of your choice
 

@@ -1,12 +1,12 @@
-# xlanguage
+# translation by distance
 
 ## a cross-language Levenshtein distance "translator"
 
-Use Levenshtein distances to transform text into words from another language of your choice
+Use Levenshtein distances to transform text into words from another language
 
 The results are not (usually) grammatical in that language
 
-Languages available:
+Languages available (defaults shipped with my unix flavor):
 
 * Bokmål
 * Brazilian
